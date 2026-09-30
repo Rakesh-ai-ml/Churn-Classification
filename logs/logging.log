@@ -1,0 +1,129 @@
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: file downloaded]
+[ ERROR: main: [Errno 13] Permission denied: 'artifacts\\data_ingestion\\archive.zip']
+Traceback (most recent call last):
+  File "D:\Bank\main.py", line 10, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "D:\Bank\src\churn_classification\pipeline\data_ingestion_pipeline.py", line 17, in initiate_data_ingestion
+    data_ingestion.extract_zip_file()
+  File "D:\Bank\src\churn_classification\components\data_ingestion.py", line 35, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\zipfile\__init__.py", line 1336, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'artifacts\\data_ingestion\\archive.zip'
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ ERROR: main: [Errno 13] Permission denied: 'artifacts\\data_ingestion']
+Traceback (most recent call last):
+  File "D:\Bank\main.py", line 10, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "D:\Bank\src\churn_classification\pipeline\data_ingestion_pipeline.py", line 17, in initiate_data_ingestion
+    data_ingestion.extract_zip_file()
+  File "D:\Bank\src\churn_classification\components\data_ingestion.py", line 35, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\zipfile\__init__.py", line 1336, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'artifacts\\data_ingestion'
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ ERROR: main: [Errno 13] Permission denied: 'artifacts\\data_ingestion']
+Traceback (most recent call last):
+  File "D:\Bank\main.py", line 10, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "D:\Bank\src\churn_classification\pipeline\data_ingestion_pipeline.py", line 17, in initiate_data_ingestion
+    data_ingestion.extract_zip_file()
+  File "D:\Bank\src\churn_classification\components\data_ingestion.py", line 35, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\zipfile\__init__.py", line 1336, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'artifacts\\data_ingestion'
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ ERROR: main: [Errno 13] Permission denied: 'artifacts\\data_ingestion']
+Traceback (most recent call last):
+  File "D:\Bank\main.py", line 10, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "D:\Bank\src\churn_classification\pipeline\data_ingestion_pipeline.py", line 17, in initiate_data_ingestion
+    data_ingestion.extract_zip_file()
+  File "D:\Bank\src\churn_classification\components\data_ingestion.py", line 35, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\zipfile\__init__.py", line 1336, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'artifacts\\data_ingestion'
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ ERROR: main: [Errno 13] Permission denied: 'artifacts\\data_ingestion']
+Traceback (most recent call last):
+  File "D:\Bank\main.py", line 10, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "D:\Bank\src\churn_classification\pipeline\data_ingestion_pipeline.py", line 17, in initiate_data_ingestion
+    data_ingestion.extract_zip_file()
+  File "D:\Bank\src\churn_classification\components\data_ingestion.py", line 35, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\zipfile\__init__.py", line 1336, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'artifacts\\data_ingestion'
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ ERROR: main: name 'subprocess' is not defined]
+Traceback (most recent call last):
+  File "D:\Bank\main.py", line 10, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "D:\Bank\src\churn_classification\pipeline\data_ingestion_pipeline.py", line 16, in initiate_data_ingestion
+    data_ingestion.download_file()
+  File "D:\Bank\src\churn_classification\components\data_ingestion.py", line 34, in download_file
+    subprocess.run(cmd, check=True)
+    ^^^^^^^^^^
+NameError: name 'subprocess' is not defined. Did you forget to import 'subprocess'
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion:  Data file download successful]
+[ INFO: data_ingestion:  Data file unzip successful]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: data_ingestion:  Data file unzip successful]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
