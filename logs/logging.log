@@ -127,3 +127,86 @@ x==========x]
 [ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
 
 x==========x]
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: data_ingestion:  Data file unzip successful]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Validation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_validation]
+[ ERROR: main: name 'DataValiadtion' is not defined]
+Traceback (most recent call last):
+  File "D:\Bank\main.py", line 23, in <module>
+    data_validation.initiate_data_validation()
+  File "D:\Bank\src\churn_classification\pipeline\data_validation_pipeline.py", line 14, in initiate_data_validation
+    data_validation = DataValiadtion(config=data_validation_config)
+                      ^^^^^^^^^^^^^^
+NameError: name 'DataValiadtion' is not defined. Did you mean: 'DataValidation'?
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: data_ingestion:  Data file unzip successful]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Validation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_validation]
+[ ERROR: main: [Errno 2] No such file or directory: 'artifacts\\data_validation\\unzipped\\customer_churn_dataset-testing-master.csv']
+Traceback (most recent call last):
+  File "D:\Bank\main.py", line 23, in <module>
+    data_validation.initiate_data_validation()
+  File "D:\Bank\src\churn_classification\pipeline\data_validation_pipeline.py", line 15, in initiate_data_validation
+    data_validation.validate_all_columns()
+  File "D:\Bank\src\churn_classification\components\data_validation.py", line 28, in validate_all_columns
+    raise e
+  File "D:\Bank\src\churn_classification\components\data_validation.py", line 14, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Bank\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 872, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Bank\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Bank\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1643, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Bank\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1907, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "D:\Bank\.venv\Lib\site-packages\pandas\io\common.py", line 930, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\data_validation\\unzipped\\customer_churn_dataset-testing-master.csv'
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: data_ingestion:  Data file unzip successful]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Validation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_validation]
+[ INFO: main: ---------------->> stage Data Validation stage completed <<----------------
+
+x==========x]

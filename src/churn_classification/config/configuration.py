@@ -1,14 +1,17 @@
 import os
 from src.churn_classification.constants import *
 from src.churn_classification.utils.common import read_yaml, create_directories
-from src.churn_classification.entity.config_entity import DataIngestionConfig
 from pydantic import validate_call
-# from src.churn_classification.entity.config_entity import DataIngestionConfig  
+from src.churn_classification.entity.config_entity import (DataIngestionConfig,
+                                                           DataValidationConfig
+                                                           )
+
 from src.churn_classification.constants.constants import (
                                                             CONFIG_FILE_PATH,
                                                             PARAMS_FILE_PATH,
                                                             SCHEMA_FILE_PATH
                                                         )
+
 
 
 class ConfigurationManager:
@@ -21,6 +24,7 @@ class ConfigurationManager:
                 ):
         
         self.config=read_yaml(config_filepath)
+        self.schema=read_yaml(schema_filepath)
         create_directories([self.config.artifacts_root])
 
                 
@@ -29,6 +33,11 @@ class ConfigurationManager:
         create_directories([config.data_ingestion.root_dir])
         return DataIngestionConfig(**self.config.data_ingestion)
     
+    def get_data_validation_config(self) -> DataValidationConfig:
+        config = self.config
+        schema = self.schema.COLUMNS
+        create_directories([config.data_validation.root_dir])
+        return DataValidationConfig(**self.config.data_validation, all_schema=schema)
 
 
 

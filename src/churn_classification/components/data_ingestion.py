@@ -5,7 +5,6 @@ from src.churn_classification.entity.config_entity import (DataIngestionConfig)
 from dotenv import load_dotenv
 load_dotenv()
 import subprocess
-
 import kaggle
 
 class DataIngestion:
