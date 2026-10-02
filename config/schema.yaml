@@ -12,3 +12,5 @@ COLUMNS:
   - Last Interaction
   - Churn
   
+TARGET_COLUMN: Churn
+  

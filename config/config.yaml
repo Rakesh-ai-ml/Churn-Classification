@@ -10,3 +10,9 @@ data_validation:
   root_dir: artifacts/data_validation
   STATUS_FILE: artifacts/data_validation/status.txt
   unzip_data_dir: artifacts/data_ingestion/unzipped/customer_churn_dataset-testing-master.csv
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_ingestion/unzipped/customer_churn_dataset-testing-master.csv
+  train_data_file: artifacts/data_transformation/transformed_data/train.csv
+  test_data_file: artifacts/data_transformation/transformed_data/test.csv 

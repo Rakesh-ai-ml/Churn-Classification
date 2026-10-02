@@ -3,7 +3,8 @@ from src.churn_classification.constants import *
 from src.churn_classification.utils.common import read_yaml, create_directories
 from pydantic import validate_call
 from src.churn_classification.entity.config_entity import (DataIngestionConfig,
-                                                           DataValidationConfig
+                                                           DataValidationConfig,
+                                                           DataTransformationConfig
                                                            )
 
 from src.churn_classification.constants.constants import (
@@ -11,7 +12,6 @@ from src.churn_classification.constants.constants import (
                                                             PARAMS_FILE_PATH,
                                                             SCHEMA_FILE_PATH
                                                         )
-
 
 
 class ConfigurationManager:
@@ -39,6 +39,11 @@ class ConfigurationManager:
         create_directories([config.data_validation.root_dir])
         return DataValidationConfig(**self.config.data_validation, all_schema=schema)
 
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        config = self.config
+        target_column = self.schema.TARGET_COLUMN
+        create_directories([config.data_transformation.root_dir])
+        return DataTransformationConfig(**self.config.data_transformation, target_column=target_column)
 
 
 

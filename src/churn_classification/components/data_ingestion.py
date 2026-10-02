@@ -1,7 +1,7 @@
 import os
 from src.churn_classification.logger import logger
 import zipfile
-from src.churn_classification.entity.config_entity import (DataIngestionConfig)
+from src.churn_classification.entity.config_entity import DataIngestionConfig
 from dotenv import load_dotenv
 load_dotenv()
 import subprocess
@@ -37,9 +37,10 @@ class DataIngestion:
         Function returns None
         """
         unzip_path = self.config.unzip_dir
-        os.makedirs(unzip_path, exist_ok=True)
-        with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
-            zip_ref.extractall(unzip_path)
-            logger.info(f" Data file unzip successful")
+        if not os.path.exists(unzip_path):
+            os.makedirs(unzip_path, exist_ok=True)
+            with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+                zip_ref.extractall(unzip_path)
+                logger.info(f" Data file unzip successful")
 
 

@@ -210,3 +210,421 @@ x==========x]
 [ INFO: main: ---------------->> stage Data Validation stage completed <<----------------
 
 x==========x]
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: data_ingestion:  Data file unzip successful]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Validation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_validation]
+[ INFO: main: ---------------->> stage Data Validation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: data_ingestion:  Data file unzip successful]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Validation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_validation]
+[ INFO: main: ---------------->> stage Data Validation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Transformation stage started <<----------------]
+[ ERROR: main: 'DataTransformationTrainingPipeline' object has no attribute 'initiate_data_validation']
+Traceback (most recent call last):
+  File "D:\Bank\main.py", line 37, in <module>
+    data_validation.initiate_data_validation()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataTransformationTrainingPipeline' object has no attribute 'initiate_data_validation'. Did you mean: 'initiate_data_transformation'?
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: data_ingestion:  Data file unzip successful]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Validation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_validation]
+[ INFO: main: ---------------->> stage Data Validation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Transformation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ ERROR: main: DataTransformation.get_transformed_data() missing 2 required positional arguments: 'X' and 'y']
+Traceback (most recent call last):
+  File "D:\Bank\main.py", line 37, in <module>
+    data_validation.initiate_data_transformation()
+  File "D:\Bank\src\churn_classification\pipeline\data_transformation_pipeline.py", line 15, in initiate_data_transformation
+    data_transformation.get_transformed_data()
+TypeError: DataTransformation.get_transformed_data() missing 2 required positional arguments: 'X' and 'y'
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ ERROR: main: [Errno 22] Invalid argument: 'artifacts\\data_ingestion\\unzipped\\customer_churn_dataset-training-master.csv']
+Traceback (most recent call last):
+  File "D:\Bank\main.py", line 11, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "D:\Bank\src\churn_classification\pipeline\data_ingestion_pipeline.py", line 17, in initiate_data_ingestion
+    data_ingestion.extract_zip_file()
+  File "D:\Bank\src\churn_classification\components\data_ingestion.py", line 42, in extract_zip_file
+    zip_ref.extractall(unzip_path)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\zipfile\__init__.py", line 1757, in extractall
+    self._extract_member(zipinfo, path, pwd)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\zipfile\__init__.py", line 1814, in _extract_member
+    open(targetpath, "wb") as target:
+    ^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument: 'artifacts\\data_ingestion\\unzipped\\customer_churn_dataset-training-master.csv'
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Validation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_validation]
+[ INFO: main: ---------------->> stage Data Validation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Transformation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ ERROR: data_transformation: Error in data transformation: 'function' object has no attribute 'data_path']
+[ ERROR: main: 'function' object has no attribute 'data_path']
+Traceback (most recent call last):
+  File "D:\Bank\main.py", line 37, in <module>
+    data_validation.initiate_data_transformation()
+  File "D:\Bank\src\churn_classification\pipeline\data_transformation_pipeline.py", line 15, in initiate_data_transformation
+    data_transformation.get_transformed_data()
+  File "D:\Bank\src\churn_classification\components\data_transformation.py", line 60, in get_transformed_data
+    train, test = self.train_test_split()
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Bank\src\churn_classification\components\data_transformation.py", line 31, in train_test_split
+    raise e
+  File "D:\Bank\src\churn_classification\components\data_transformation.py", line 24, in train_test_split
+    data = pd.read_csv(self.config.data_path)
+                       ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'data_path'
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Validation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_validation]
+[ INFO: main: ---------------->> stage Data Validation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Transformation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ ERROR: data_transformation: Error in data transformation: 'function' object has no attribute 'data_path']
+[ ERROR: main: 'function' object has no attribute 'data_path']
+Traceback (most recent call last):
+  File "D:\Bank\main.py", line 37, in <module>
+    data_validation.initiate_data_transformation()
+  File "D:\Bank\src\churn_classification\pipeline\data_transformation_pipeline.py", line 15, in initiate_data_transformation
+    data_transformation.get_transformed_data()
+  File "D:\Bank\src\churn_classification\components\data_transformation.py", line 60, in get_transformed_data
+    train, test = self.data_train_test_split()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Bank\src\churn_classification\components\data_transformation.py", line 31, in data_train_test_split
+    raise e
+  File "D:\Bank\src\churn_classification\components\data_transformation.py", line 24, in data_train_test_split
+    data = pd.read_csv(self.config.data_path)
+                       ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'data_path'
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Validation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_validation]
+[ INFO: main: ---------------->> stage Data Validation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Transformation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ ERROR: data_transformation: Error in data transformation: 'function' object has no attribute 'data_path']
+[ ERROR: main: 'function' object has no attribute 'data_path']
+Traceback (most recent call last):
+  File "D:\Bank\main.py", line 37, in <module>
+    data_validation.initiate_data_transformation()
+  File "D:\Bank\src\churn_classification\pipeline\data_transformation_pipeline.py", line 15, in initiate_data_transformation
+    data_transformation.get_transformed_data()
+  File "D:\Bank\src\churn_classification\components\data_transformation.py", line 60, in get_transformed_data
+    train, test = self.data_train_test_split()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Bank\src\churn_classification\components\data_transformation.py", line 31, in data_train_test_split
+    raise e
+  File "D:\Bank\src\churn_classification\components\data_transformation.py", line 24, in data_train_test_split
+    data = pd.read_csv(self.config.data_path)
+                       ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'data_path'
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Validation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_validation]
+[ INFO: main: ---------------->> stage Data Validation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Transformation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ ERROR: data_transformation: Error in data transformation: 'function' object has no attribute 'data_path']
+[ ERROR: main: 'function' object has no attribute 'data_path']
+Traceback (most recent call last):
+  File "D:\Bank\main.py", line 37, in <module>
+    data_validation.initiate_data_transformation()
+  File "D:\Bank\src\churn_classification\pipeline\data_transformation_pipeline.py", line 15, in initiate_data_transformation
+    data_transformation.get_transformed_data()
+  File "D:\Bank\src\churn_classification\components\data_transformation.py", line 60, in get_transformed_data
+    train, test = self.data_train_test_split()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Bank\src\churn_classification\components\data_transformation.py", line 31, in data_train_test_split
+    raise e
+  File "D:\Bank\src\churn_classification\components\data_transformation.py", line 24, in data_train_test_split
+    data = pd.read_csv(self.config.data_path)
+                       ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'data_path'
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Validation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_validation]
+[ INFO: main: ---------------->> stage Data Validation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Transformation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_transformation]
+[ ERROR: data_transformation: Error in data transformation: Cannot specify both 'axis' and 'index'/'columns']
+[ ERROR: main: Cannot specify both 'axis' and 'index'/'columns']
+Traceback (most recent call last):
+  File "D:\Bank\main.py", line 37, in <module>
+    data_validation.initiate_data_transformation()
+  File "D:\Bank\src\churn_classification\pipeline\data_transformation_pipeline.py", line 15, in initiate_data_transformation
+    data_transformation.get_transformed_data()
+  File "D:\Bank\src\churn_classification\components\data_transformation.py", line 61, in get_transformed_data
+    train, test = self.data_train_test_split()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Bank\src\churn_classification\components\data_transformation.py", line 30, in data_train_test_split
+    raise e
+  File "D:\Bank\src\churn_classification\components\data_transformation.py", line 24, in data_train_test_split
+    data = data.drop(columns=['CustomerID'], axis=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Bank\.venv\Lib\site-packages\pandas\core\frame.py", line 6302, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "D:\Bank\.venv\Lib\site-packages\pandas\core\generic.py", line 4619, in drop
+    raise ValueError("Cannot specify both 'axis' and 'index'/'columns'")
+ValueError: Cannot specify both 'axis' and 'index'/'columns'
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Validation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_validation]
+[ INFO: main: ---------------->> stage Data Validation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Transformation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_transformation]
+[ INFO: data_transformation: Data transformation completed successfully.]
+[ INFO: data_transformation: Split data into training and test sets]
+[ INFO: main: ---------------->> stage Data Transformation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Validation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_validation]
+[ INFO: main: ---------------->> stage Data Validation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Transformation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_transformation]
+[ INFO: data_transformation: Data transformation completed successfully.]
+[ INFO: data_transformation: Split data into training and test sets]
+[ INFO: main: ---------------->> stage Data Transformation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Validation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_validation]
+[ INFO: main: ---------------->> stage Data Validation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Transformation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_transformation]
+[ INFO: data_transformation: Data transformation completed successfully.]
+[ INFO: data_transformation: Split data into training and test sets]
+[ INFO: main: ---------------->> stage Data Transformation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Validation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_validation]
+[ INFO: main: ---------------->> stage Data Validation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Transformation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_transformation]
+[ INFO: data_transformation: Data transformation completed successfully.]
+[ INFO: data_transformation: Split data into training and test sets]
+[ INFO: main: ---------------->> stage Data Transformation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Ingestion stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_ingestion]
+[ INFO: data_ingestion: File already exists]
+[ INFO: main: ---------------->> stage Data Ingestion stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Validation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_validation]
+[ INFO: main: ---------------->> stage Data Validation stage completed <<----------------
+
+x==========x]
+[ INFO: main: ---------------->> stage Data Transformation stage started <<----------------]
+[ INFO: common: yaml file: config\config.yaml loaded successfully]
+[ INFO: common: yaml file: config\schema.yaml loaded successfully]
+[ INFO: common: Directory created at: artifacts]
+[ INFO: common: Directory created at: artifacts/data_transformation]
+[ INFO: data_transformation: Data transformation completed successfully.]
+[ INFO: data_transformation: Split data into training and test sets]
+[ INFO: main: ---------------->> stage Data Transformation stage completed <<----------------
+
+x==========x]
